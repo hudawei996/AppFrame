@@ -1,0 +1,85 @@
+//全局统一依赖文件，建议各module都统一依赖这个配置，方便统一配置管理
+
+allprojects {
+  repositories {
+    jcenter()
+  }
+}
+
+ def daggerVersion = "2.0.2"
+ def retrofitVersion = "2.2.0"
+ def supportVersion = "25.2.0"
+ def rxBindingVersion = '0.4.0'
+
+ def leakCanaryVersion = "1.3.1"
+ def blockCanaryVersion = '1.1.4'
+ def butterKnifeVersion = '8.5.1'
+ def okhttpVersion = '3.4.1'
+
+ext {
+    //Android
+    buildToolsVersion = "25.0.2"
+    minSdkVersion = 14
+    targetSdkVersion = 25
+    compileSdkVersion = 25
+    applicationId = "com.vanke.activity"
+    versionCode = 62
+    versionName = "4.0.0"
+    abortOnLintError = false
+    checkLintRelease = false
+
+
+
+    //Libraries
+    libSupportAppcompat = "com.android.support:appcompat-v7:${supportVersion}"
+    libSupportDesign = "com.android.support:design:${supportVersion}"
+    libSupportRecyclerview = "com.android.support:recyclerview-v7:${supportVersion}"
+    libSupportV4 = "com.android.support:support-v4:${supportVersion}"
+
+    libButterKnife = "com.jakewharton:butterknife:${butterKnifeVersion}"
+    libRxAndroid = "io.reactivex:rxandroid:1.2.1"
+    libRxJava = "io.reactivex:rxjava:1.1.8"
+    libEventBus = "org.greenrobot:eventbus:3.0.0"
+    libJavaxAnnotation = "javax.annotation:jsr250-api:1.0"
+    libOkHttp = "com.squareup.okhttp3:okhttp:${okhttpVersion}"
+    libOkio = "com.squareup.okio:okio:1.11.0"
+    libPicasso = "com.squareup.picasso:picasso:2.5.2"
+    libStetho = "com.facebook.stetho:stetho:1.4.2"
+    libStethoOkHttp = "com.facebook.stetho:stetho-okhttp3:1.4.2"
+    libBaseAdapter = "com.joanzapata.android:base-adapter-helper:1.1.11"
+    libBaseRecyclerAdapter = "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.1.3"
+
+    libGson = "com.google.code.gson:gson:2.4"
+    libRetrofit = "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+    libRetrofitConverterGson = "com.squareup.retrofit2:converter-gson:${retrofitVersion}"
+    libRetrofitAdapterRxJava = "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}"
+    libOkHttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${okhttpVersion}"
+
+    libDagger = "com.google.dagger:dagger:${daggerVersion}"
+    libDaggerCompiler = "com.google.dagger:dagger-compiler:${daggerVersion}"
+
+    libGlide = "com.github.bumptech.glide:glide:3.7.0"
+    libLog = "com.elvishew:xlog:1.1.0"
+    libTab = "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar"
+
+    libRxBinding = "com.jakewharton.rxbinding:rxbinding:${rxBindingVersion}"
+    libRxBindingSupportV4 = "com.jakewharton.rxbinding:rxbinding-support-v4:${rxBindingVersion}"
+    libRxBindingAppcompatV7 = "com.jakewharton.rxbinding:rxbinding-appcompat-v7:${rxBindingVersion}"
+    libRxBindingDesign = "com.jakewharton.rxbinding:rxbinding-design:${rxBindingVersion}"
+    libRxBindingRecyclerview = "com.jakewharton.rxbinding:rxbinding-recyclerview-v7:${rxBindingVersion}"
+
+
+    debugDependencies = [
+            leakCanary: "com.squareup.leakcanary:leakcanary-android:${leakCanaryVersion}",
+            blockcanary: "com.github.moduth:blockcanary-ui:${blockCanaryVersion}",
+    ]
+
+    releaseDependencies = [
+            leakCanary: "com.squareup.leakcanary:leakcanary-android-no-op:${leakCanaryVersion}",
+            blockcanary: "com.github.moduth:blockcanary-no-op:${blockCanaryVersion}",
+    ]
+
+
+    libButterKnifeAnnotation = "com.jakewharton:butterknife-compiler:${butterKnifeVersion}"
+
+}

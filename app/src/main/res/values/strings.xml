@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ZhuzeForVanke</string>
+
+
+    <array name="array_home_tab">
+        <item>住这儿</item>
+        <item>管家</item>
+        <item>有领市集</item>
+        <item>社区</item>
+        <item>我</item>
+    </array>
+
+</resources>

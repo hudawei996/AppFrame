@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">lib_vanke</string>
+    <string name="common_loading_message">正在加载中…</string>
+    <string name="common_empty_msg">抱歉,暂未获取到数据!\n请点击屏幕重试~</string>
+    <string name="common_error_msg">抱歉，当前网络不可用</string>
+    <string name="common_error_info">请检查网络或者刷新重试</string>
+    <string name="common_refresh_retry">刷新重试</string>
+    <string name="common_no_data">暂无数据</string>
+</resources>
